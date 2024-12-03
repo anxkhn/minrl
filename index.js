@@ -13,6 +13,11 @@ const html = `
     />
 
     <style>
+
+      html, body {
+        overflow: hidden;
+      }
+
       body {
         background-color: #111827;
         color: #fff;
@@ -262,6 +267,11 @@ export default {
     <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
     <style>
+
+    html, body {
+        overflow: hidden;
+      }
+
       body {
         background-color: #111827;
         color: #fff;
@@ -404,6 +414,11 @@ async function serveDeletePage(env) {
     <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
     <style>
+
+    html, body {
+        overflow: hidden;
+      }
+
       body {
         background-color: #111827;
         color: #fff;
@@ -582,6 +597,11 @@ async function serveListPage(env) {
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
     />
     <style>
+
+    html, body {
+        overflow: hidden;
+      }
+
       body {
         background-color: #111827;
         color: #fff;
