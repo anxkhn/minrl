@@ -15,7 +15,6 @@ const html = `
         color: #fff;
         margin: 0 auto;
         padding: 0 1.5rem;
-        min-height: 100vh;
       }
 
       nav {
@@ -25,6 +24,7 @@ const html = `
       .container {
         max-width: 600px;
         margin: 2rem auto;
+        min-height: 100vh;
       }
     </style>
   </head>
@@ -144,6 +144,13 @@ const html = `
         form.reset();
       });
     </script>
+    <footer class="container-fluid" style="text-align: center">
+      <small>
+        minrl = mini + url, a serverless URL shortener <br />
+        made with ❤️ by Anas Khan.
+        <a href="https://github.com/anxkhn/minirl" class="secondary" target="_blank" rel="noopener">Fork on GitHub</a>
+      </small>
+    </footer>
   </body>
 </html>
 `;
@@ -242,7 +249,6 @@ export default {
         color: #fff;
         margin: 0 auto;
         padding: 0 1.5rem;
-        min-height: 100vh;
       }
 
       nav {
@@ -252,6 +258,7 @@ export default {
       .container {
         max-width: 600px;
         margin: 2rem auto;
+        min-height: 100vh;
       }
     </style>
   </head>
@@ -274,6 +281,13 @@ export default {
       <p>But don't worry, you can go back to the home page.</p>
       <a href="/">Go to Home</a>
     </main>
+    <footer class="container-fluid" style="text-align: center">
+      <small>
+        minrl = mini + url, a serverless URL shortener <br />
+        made with ❤️ by Anas Khan.
+        <a href="https://github.com/anxkhn/minirl" class="secondary" target="_blank" rel="noopener">Fork on GitHub</a>
+      </small>
+    </footer>
   </body>
 </html>
 `;
@@ -386,7 +400,6 @@ async function serveDeletePage(env) {
         color: #fff;
         margin: 0 auto;
         padding: 0 1.5rem;
-        min-height: 100vh;
       }
 
       nav {
@@ -396,6 +409,7 @@ async function serveDeletePage(env) {
       .container {
         max-width: 600px;
         margin: 2rem auto;
+        min-height: 100vh;
       }
     </style>
   </head>
@@ -470,6 +484,13 @@ async function serveDeletePage(env) {
         form.reset();
       });
     </script>
+    <footer class="container-fluid" style="text-align: center">
+      <small>
+        minrl = mini + url, a serverless URL shortener <br />
+        made with ❤️ by Anas Khan.
+        <a href="https://github.com/anxkhn/minirl" class="secondary" target="_blank" rel="noopener">Fork on GitHub</a>
+      </small>
+    </footer>
   </body>
 </html>
   `,
@@ -563,7 +584,6 @@ async function serveListPage(env) {
         color: #fff;
         margin: 0 auto;
         padding: 0 1.5rem;
-        min-height: 100vh;
       }
 
       nav {
@@ -573,6 +593,7 @@ async function serveListPage(env) {
       .container {
         max-width: 600px;
         margin: 2rem auto;
+        min-height: 100vh;
       }
 
       table {
@@ -655,6 +676,13 @@ async function serveListPage(env) {
         });
       });
     </script>
+    <footer class="container-fluid" style="text-align: center">
+      <small>
+        minrl = mini + url, a serverless URL shortener <br />
+        made with ❤️ by Anas Khan.
+        <a href="https://github.com/anxkhn/minirl" class="secondary" target="_blank" rel="noopener">Fork on GitHub</a>
+      </small>
+    </footer>
   </body>
 </html>
 `;
