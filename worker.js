@@ -6,7 +6,19 @@ const html = `
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="dark" />
     <title>MINRL</title>
-    <link rel="manifest" href="manifest.json" />
+
+    <!-- Favicon links for all platforms -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="icon" href="assets/android-chrome-192x192.png" sizes="192x192" type="image/png" />
+    <link rel="icon" href="assets/android-chrome-512x512.png" sizes="512x512" type="image/png" />
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#111827">
+    <link rel="manifest" href="assets/manifest.json">
+
+    <!-- Pico CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
 
     <style>
@@ -156,27 +168,6 @@ const html = `
 `;
 const SECRET_CODE = "code";
 
-const manifest = JSON.stringify({
-  name: "MINRL - URL Shortener",
-  short_name: "MINRL",
-  start_url: "/",
-  display: "standalone",
-  background_color: "#111827",
-  theme_color: "#fff",
-  icons: [
-    {
-      src: "/logo.png",
-      sizes: "192x192",
-      type: "image/png",
-    },
-    {
-      src: "/logo.png",
-      sizes: "512x512",
-      type: "image/png",
-    },
-  ],
-});
-
 export default {
   async fetch(request, env) {
     const { pathname } = new URL(request.url);
@@ -195,12 +186,6 @@ export default {
 
     if (request.method === "GET" && pathname === "/list") {
       return serveListPage(env);
-    }
-
-    if (request.method === "GET" && pathname === "/manifest.json") {
-      return new Response(manifest, {
-        headers: { "Content-Type": "application/manifest+json" },
-      });
     }
 
     if (request.method === "GET" && pathname === "/delete") {
