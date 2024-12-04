@@ -124,7 +124,11 @@ const html = `
           body: new URLSearchParams({ path, url, secretCode }),
         });
         const data = await response.json();
+        if data.shortUrl {
         messageEl.textContent = data.message + data.shortUrl;
+        } else {
+        messageEl.textContent = data.message;
+        }
 
         if (data.success) {
           QRCode.toCanvas(
