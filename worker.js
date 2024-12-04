@@ -44,8 +44,11 @@ const html = `
   <body>
     <nav>
       <ul>
-        <li>
-          <strong><a href="/" style="text-decoration: none; color: white;">MINRL</a></strong>
+        <li style="display: flex; align-items: center;">
+          <a href="/" style="text-decoration: none; color: white; display: flex; align-items: center;">
+            <img src="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/logo.png" alt="Logo" style="width: 1.5em; height: 1.5em; margin-right: 0.5em;">
+            <strong>MINRL</strong>
+          </a>
         </li>
       </ul>
       <ul>
@@ -259,8 +262,11 @@ export default {
   <body>
     <nav>
       <ul>
-        <li>
-          <strong><a href="/" style="text-decoration: none; color: white;">MINRL</a></strong>
+        <li style="display: flex; align-items: center;">
+          <a href="/" style="text-decoration: none; color: white; display: flex; align-items: center;">
+            <img src="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/logo.png" alt="Logo" style="width: 1.5em; height: 1.5em; margin-right: 0.5em;">
+            <strong>MINRL</strong>
+          </a>
         </li>
       </ul>
       <ul>
@@ -422,8 +428,11 @@ async function serveDeletePage(env) {
   <body>
     <nav>
       <ul>
-        <li>
-          <strong><a href="/" style="text-decoration: none; color: white;">MINRL</a></strong>
+        <li style="display: flex; align-items: center;">
+          <a href="/" style="text-decoration: none; color: white; display: flex; align-items: center;">
+            <img src="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/logo.png" alt="Logo" style="width: 1.5em; height: 1.5em; margin-right: 0.5em;">
+            <strong>MINRL</strong>
+          </a>
         </li>
       </ul>
       <ul>
@@ -645,8 +654,11 @@ async function serveListPage(env) {
   <body>
     <nav>
       <ul>
-        <li>
-          <strong><a href="/" style="text-decoration: none; color: white;">MINRL</a></strong>
+        <li style="display: flex; align-items: center;">
+          <a href="/" style="text-decoration: none; color: white; display: flex; align-items: center;">
+            <img src="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/logo.png" alt="Logo" style="width: 1.5em; height: 1.5em; margin-right: 0.5em;">
+            <strong>MINRL</strong>
+          </a>
         </li>
       </ul>
       <ul>
