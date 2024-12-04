@@ -71,7 +71,7 @@ const html = `
         </label>
         <label for="secret">
           Secret Code
-          <em data-tooltip="a secret password to delete your shorturl">?</em>
+          <em data-tooltip="password to perform actions, use 'code'.">?</em>
           <input type="password" id="secretCode" name="secretCode" placeholder="••••••••" required />
         </label>
         <button type="submit" class="contrast"><b> Create Short URL</b></button>
@@ -451,7 +451,7 @@ async function serveDeletePage(env) {
 
         <label for="secretCode">
           Secret Code
-          <em data-tooltip="password that you used to create the redirect">?</em>
+          <em data-tooltip="password that you used to create short url">?</em>
           <input type="password" id="secretCode" name="secretCode" placeholder="••••••••" required />
         </label>
 
