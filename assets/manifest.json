@@ -7,12 +7,12 @@
   "theme_color": "#fff",
   "icons": [
     {
-      "src": "https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/logo.png",
+      "src": "https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/logo.png",
+      "src": "https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
