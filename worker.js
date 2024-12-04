@@ -14,9 +14,7 @@ const html = `
 
     <style>
 
-      html, body {
-        overflow: hidden;
-      }
+      
 
       body {
         background-color: #111827;
@@ -110,10 +108,6 @@ const html = `
         this.setAttribute("aria-invalid", !isValid);
         urlFeedback.style.display = isValid ? "none" : "block";
       });
-
-      const table = document
-        .getElementById("redirects-table")
-        .getElementsByTagName("tbody")[0];
 
       async function loadRedirects() {
         table.innerHTML = "";
@@ -268,10 +262,6 @@ export default {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
     <style>
 
-    html, body {
-        overflow: hidden;
-      }
-
       body {
         background-color: #111827;
         color: #fff;
@@ -415,9 +405,7 @@ async function serveDeletePage(env) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
     <style>
 
-    html, body {
-        overflow: hidden;
-      }
+    
 
       body {
         background-color: #111827;
@@ -598,9 +586,7 @@ async function serveListPage(env) {
     />
     <style>
 
-    html, body {
-        overflow: hidden;
-      }
+    
 
       body {
         background-color: #111827;
