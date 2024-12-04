@@ -40,7 +40,7 @@ const html = `
   <body>
     <nav>
       <ul>
-        <li><strong>MINRL</strong></li>
+        <li><strong><a href="/">MINRL</a></strong></li>
       </ul>
       <ul>
         <li><a href="/list" class="secondary">List 'em</a></li>
@@ -294,7 +294,7 @@ export default {
   <body>
     <nav>
       <ul>
-        <li><strong>MINRL</strong></li>
+        <li><strong><a href="/">MINRL</a></strong></li>
       </ul>
       <ul>
         <li><a href="/" class="secondary">Home</a></li>
@@ -441,7 +441,7 @@ async function serveDeletePage(env) {
   <body>
     <nav>
       <ul>
-        <li><strong>MINRL</strong></li>
+        <li><strong><a href="/">MINRL</a></strong></li>
       </ul>
       <ul>
         <li><a href="/" class="secondary">Home</a></li>
@@ -651,7 +651,7 @@ async function serveListPage(env) {
   <body>
     <nav>
       <ul>
-        <li><strong>MINRL</strong></li>
+        <li><strong><a href="/">MINRL</a></strong></li>
       </ul>
       <ul>
         <li><a href="/" class="secondary">Home</a></li>
