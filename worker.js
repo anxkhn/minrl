@@ -157,6 +157,8 @@ const html = `
       closeButton.addEventListener("click", () => {
         modal.close();
         form.reset();
+        const event = new Event("input", { bubbles: true });
+        urlInput.dispatchEvent(event);
       });
     </script>
     <footer class="container-fluid" style="text-align: center">
@@ -500,8 +502,6 @@ async function serveDeletePage(env) {
       closeButton.addEventListener("click", () => {
         modal.close();
         form.reset();
-        const event = new Event("input", { bubbles: true });
-        urlInput.dispatchEvent(event);
       });
     </script>
     <footer class="container-fluid" style="text-align: center">
