@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <title>MINRL</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+
+    <style>
+      body {
+        background-color: #111827;
+        color: #fff;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        min-height: 100vh;
+      }
+
+      nav {
+        padding: 1.5rem 0;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 2rem auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <strong><a href="/" style="text-decoration: none">MINRL</a></strong>
+        </li>
+      </ul>
+      <ul>
+        <li><a href="/list" class="secondary">List 'em</a></li>
+        <li><a href="/delete" class="secondary">Delete 'em</a></li>
+      </ul>
+    </nav>
+    <main class="container">
+      <form id="add-redirect-form">
+        <h2>URL Shortner</h2>
+        <label for="path">
+          Path (optional)
+          <input type="text" id="path" name="path" placeholder="custom-path" />
+          <small>If no path is specified, a random path will be generated</small>
+        </label>
+        <label for="url">
+          URL
+          <input type="url" id="url" name="url" placeholder="https://example.com" required />
+          <small id="urlFeedback" style="display: none; color: #ff4444">Please enter a valid URL</small>
+        </label>
+        <label for="secret">
+          Secret Code
+          <em data-tooltip="a secret password to delete your shorturl">?</em>
+          <input type="password" id="secretCode" name="secretCode" placeholder="••••••••" required />
+        </label>
+        <button type="submit" class="contrast"><b> Create Short URL</b></button>
+      </form>
+      <dialog id="myModal">
+        <article>
+          <header>
+            <button aria-label="Close" rel="prev"></button>
+          </header>
+          <p id="message"></p>
+          <canvas id="qrcode"></canvas>
+        </article>
+      </dialog>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <script>
+      const urlInput = document.getElementById("url");
+      const urlFeedback = document.getElementById("urlFeedback");
+      const form = document.getElementById("add-redirect-form");
+
+      urlInput.addEventListener("input", function () {
+        let isValid = false;
+        try {
+          new URL(this.value);
+          isValid = true;
+        } catch (e) {
+          isValid = false;
+        }
+        this.setAttribute("aria-invalid", !isValid);
+        urlFeedback.style.display = isValid ? "none" : "block";
+      });
+
+      async function loadRedirects() {
+        table.innerHTML = "";
+      }
+      loadRedirects();
+      const modal = document.getElementById("myModal");
+      modal.addEventListener("close", () => modal.setAttribute("aria-hidden", "true"));
+      modal.addEventListener("showModal", () => modal.setAttribute("aria-hidden", "false"));
+
+      const closeButton = modal.querySelector("button[aria-label='Close']");
+      const messageEl = document.getElementById("message");
+      const canvas = document.getElementById("qrcode");
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const path = form.elements.path.value;
+        const url = form.elements.url.value;
+        const secretCode = form.elements.secretCode.value;
+
+        const response = await fetch("/api/redirects", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams({ path, url, secretCode }),
+        });
+        const data = await response.json();
+        messageEl.textContent = data.message + data.shortUrl;
+
+        if (data.success) {
+          QRCode.toCanvas(
+            canvas,
+            data.shortUrl,
+            {
+              color: {
+                dark: "#FFFFFF",
+                light: "#00000000",
+              },
+              width: 200,
+              height: 200,
+            },
+            function (error) {
+              if (error) console.error(error);
+              console.log("QR Code successfully generated!");
+            }
+          );
+          canvas.style.display = "block";
+        } else {
+          canvas.style.display = "none";
+        }
+
+        modal.showModal();
+      });
+      closeButton.addEventListener("click", () => {
+        modal.close();
+        form.reset();
+      });
+    </script>
+  </body>
+</html>

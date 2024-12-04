@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <title>Shortened URLs</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+    <style>
+      body {
+        background-color: #111827;
+        color: #fff;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        min-height: 100vh;
+      }
+
+      nav {
+        padding: 1.5rem 0;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 2rem auto;
+      }
+
+      table {
+        background-color: #111827;
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 2rem;
+      }
+
+      th,
+      td {
+        padding: 1rem;
+        text-align: left;
+        word-wrap: break-word;
+        background-color: #111827;
+      }
+
+      td {
+        text-align: justify;
+      }
+
+      td.copy-key {
+        cursor: pointer;
+      }
+
+      tr {
+        height: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <strong><a href="/" style="text-decoration: none">MINRL</a></strong>
+        </li>
+      </ul>
+      <ul>
+        <li><a href="/" class="secondary">Home</a></li>
+        <li><a href="/delete" class="secondary">Delete 'em</a></li>
+      </ul>
+    </nav>
+    <main class="container">
+      <h2>Shortened URLs</h2>
+      <table id="shortened-urls-table">
+        <thead>
+          <tr>
+            <th>Short URL</th>
+            <th>Actual URL</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </main>
+  </body>
+</html>

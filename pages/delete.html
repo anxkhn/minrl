@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <title>Delete Shortened URLs</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+    <style>
+      body {
+        background-color: #111827;
+        color: #fff;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        min-height: 100vh;
+      }
+
+      nav {
+        padding: 1.5rem 0;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 2rem auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <strong><a href="/" style="text-decoration: none">MINRL</a></strong>
+        </li>
+      </ul>
+      <ul>
+        <li><a href="/" class="secondary">Home</a></li>
+        <li><a href="/list" class="secondary">List 'em</a></li>
+      </ul>
+    </nav>
+
+    <main class="container">
+      <form id="delete-redirect-form">
+        <h2>Delete Shortened URLs</h2>
+        <label for="path">
+          Path
+          <input type="text" id="path" name="path" placeholder="custom-path" required />
+        </label>
+
+        <label for="secretCode">
+          Secret Code
+          <em data-tooltip="password that you used to create the redirect">?</em>
+          <input type="password" id="secretCode" name="secretCode" placeholder="••••••••" required />
+        </label>
+
+        <button type="submit" class="contrast"><b>Delete Shortened URLs</b></button>
+      </form>
+
+      <dialog id="myModal">
+        <article>
+          <header>
+            <button aria-label="Close" rel="prev"></button>
+          </header>
+          <p id="message"></p>
+        </article>
+      </dialog>
+    </main>
+
+    <script>
+      const form = document.getElementById("delete-redirect-form");
+      const modal = document.getElementById("myModal");
+      const closeButton = modal.querySelector("button[aria-label='Close']");
+      const messageEl = document.getElementById("message");
+
+      modal.addEventListener("close", () => modal.setAttribute("aria-hidden", "true"));
+      modal.addEventListener("showModal", () => modal.setAttribute("aria-hidden", "false"));
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const path = form.elements.path.value;
+        const secretCode = form.elements.secretCode.value;
+
+        const response = await fetch("/api/redirects", {
+          method: "DELETE",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams({ path, secretCode }),
+        });
+
+        const data = await response.json();
+        messageEl.textContent = data.message;
+        modal.showModal();
+      });
+
+      closeButton.addEventListener("click", () => {
+        modal.close();
+        form.reset();
+      });
+    </script>
+  </body>
+</html>
