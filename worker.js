@@ -33,7 +33,7 @@ const html = `
     <nav>
       <ul>
         <li>
-          <strong><a href="/" style="text-decoration: none">MINRL</a></strong>
+          <strong><a href="/" style="text-decoration: none; color: white;">MINRL</a></strong>
         </li>
       </ul>
       <ul>
@@ -260,7 +260,7 @@ export default {
     <nav>
       <ul>
         <li>
-          <strong><a href="/" style="text-decoration: none">MINRL</a></strong>
+          <strong><a href="/" style="text-decoration: none; color: white;">MINRL</a></strong>
         </li>
       </ul>
       <ul>
@@ -404,7 +404,7 @@ async function serveDeletePage(env) {
     <nav>
       <ul>
         <li>
-          <strong><a href="/" style="text-decoration: none">MINRL</a></strong>
+          <strong><a href="/" style="text-decoration: none; color: white;">MINRL</a></strong>
         </li>
       </ul>
       <ul>
@@ -608,7 +608,7 @@ async function serveListPage(env) {
     <nav>
       <ul>
         <li>
-          <strong><a href="/" style="text-decoration: none">MINRL</a></strong>
+          <strong><a href="/" style="text-decoration: none; color: white;">MINRL</a></strong>
         </li>
       </ul>
       <ul>
