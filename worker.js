@@ -24,7 +24,7 @@ const html = `
       .container {
         max-width: 600px;
         margin: 2rem auto;
-        min-height: 100vh;
+        min-height: 80vh;
       }
     </style>
   </head>
@@ -258,7 +258,7 @@ export default {
       .container {
         max-width: 600px;
         margin: 2rem auto;
-        min-height: 100vh;
+        min-height: 80vh;
       }
     </style>
   </head>
@@ -409,7 +409,7 @@ async function serveDeletePage(env) {
       .container {
         max-width: 600px;
         margin: 2rem auto;
-        min-height: 100vh;
+        min-height: 80vh;
       }
     </style>
   </head>
@@ -593,7 +593,7 @@ async function serveListPage(env) {
       .container {
         max-width: 600px;
         margin: 2rem auto;
-        min-height: 100vh;
+        min-height: 80vh;
       }
 
       table {
