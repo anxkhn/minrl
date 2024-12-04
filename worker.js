@@ -16,7 +16,7 @@ const html = `
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/favicon.ico">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#111827">
-    <link rel="manifest" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/manifest.json">
+    <link rel="manifest" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/manifest.json">
 
     <!-- Pico CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
@@ -101,10 +101,6 @@ const html = `
         urlFeedback.style.display = isValid ? "none" : "block";
       });
 
-      async function loadRedirects() {
-        table.innerHTML = "";
-      }
-      loadRedirects();
       const modal = document.getElementById("myModal");
       modal.addEventListener("close", () => modal.setAttribute("aria-hidden", "true"));
       modal.addEventListener("showModal", () => modal.setAttribute("aria-hidden", "false"));
@@ -236,7 +232,7 @@ export default {
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/favicon.ico">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#111827">
-    <link rel="manifest" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/manifest.json">
+    <link rel="manifest" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/manifest.json">
 
     <!-- Pico CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
@@ -399,7 +395,7 @@ async function serveDeletePage(env) {
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/favicon.ico">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#111827">
-    <link rel="manifest" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/manifest.json">
+    <link rel="manifest" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/manifest.json">
 
     <!-- Pico CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
@@ -595,7 +591,7 @@ async function serveListPage(env) {
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/favicon.ico">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#111827">
-    <link rel="manifest" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/manifest.json">
+    <link rel="manifest" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/manifest.json">
 
     <!-- Pico CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
