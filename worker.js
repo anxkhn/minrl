@@ -157,6 +157,10 @@ const html = `
       closeButton.addEventListener("click", () => {
         modal.close();
         form.reset();
+        urlInput.setAttribute("aria-invalid", "");
+        urlFeedback.style.display = "none";
+        urlInput.value = "";
+        messageEl.textContent = "";
         const event = new Event("input", { bubbles: true });
         urlInput.dispatchEvent(event);
       });
