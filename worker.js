@@ -8,15 +8,15 @@ const html = `
     <title>MINRL</title>
 
     <!-- Favicon links for all platforms -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-    <link rel="icon" href="assets/android-chrome-192x192.png" sizes="192x192" type="image/png" />
-    <link rel="icon" href="assets/android-chrome-512x512.png" sizes="512x512" type="image/png" />
-    <link rel="shortcut icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/favicon-16x16.png">
+    <link rel="icon" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/android-chrome-192x192.png" sizes="192x192" type="image/png" />
+    <link rel="icon" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/android-chrome-512x512.png" sizes="512x512" type="image/png" />
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/favicon.ico">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#111827">
-    <link rel="manifest" href="assets/manifest.json">
+    <link rel="manifest" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/manifest.json">
 
     <!-- Pico CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
@@ -225,8 +225,20 @@ export default {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="dark" />
-    <title>Delete Shorten URLs</title>
-    <link rel="manifest" href="manifest.json" />
+    <title>MINRL</title>
+
+    <!-- Favicon links for all platforms -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/favicon-16x16.png">
+    <link rel="icon" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/android-chrome-192x192.png" sizes="192x192" type="image/png" />
+    <link rel="icon" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/android-chrome-512x512.png" sizes="512x512" type="image/png" />
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#111827">
+    <link rel="manifest" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/manifest.json">
+
+    <!-- Pico CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
     <style>
       body {
@@ -376,8 +388,20 @@ async function serveDeletePage(env) {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="dark" />
-    <title>Delete Shortened URLs</title>
-    <link rel="manifest" href="manifest.json" />
+    <title>MINRL</title>
+
+    <!-- Favicon links for all platforms -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/favicon-16x16.png">
+    <link rel="icon" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/android-chrome-192x192.png" sizes="192x192" type="image/png" />
+    <link rel="icon" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/android-chrome-512x512.png" sizes="512x512" type="image/png" />
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#111827">
+    <link rel="manifest" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/manifest.json">
+
+    <!-- Pico CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
     <style>
       body {
@@ -560,8 +584,20 @@ async function serveListPage(env) {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="dark" />
-    <title>Shortened URLs</title>
-    <link rel="manifest" href="manifest.json" />
+    <title>MINRL</title>
+
+    <!-- Favicon links for all platforms -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/favicon-16x16.png">
+    <link rel="icon" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/android-chrome-192x192.png" sizes="192x192" type="image/png" />
+    <link rel="icon" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/android-chrome-512x512.png" sizes="512x512" type="image/png" />
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#111827">
+    <link rel="manifest" href="https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/https://raw.githubusercontent.com/anxkhn/minirl/refs/heads/main/assets/manifest.json">
+
+    <!-- Pico CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
     <style>
       body {
