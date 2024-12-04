@@ -7,15 +7,9 @@ const html = `
     <meta name="color-scheme" content="dark" />
     <title>MINRL</title>
     <link rel="manifest" href="manifest.json" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
 
     <style>
-
-      
-
       body {
         background-color: #111827;
         color: #fff;
@@ -38,7 +32,9 @@ const html = `
   <body>
     <nav>
       <ul>
-        <li><strong><a href="/">MINRL</a></strong></li>
+        <li>
+          <strong><a href="/" style="text-decoration: none">MINRL</a></strong>
+        </li>
       </ul>
       <ul>
         <li><a href="/list" class="secondary">List 'em</a></li>
@@ -51,33 +47,17 @@ const html = `
         <label for="path">
           Path (optional)
           <input type="text" id="path" name="path" placeholder="custom-path" />
-          <small
-            >If no path is specified, a random path will be generated</small
-          >
+          <small>If no path is specified, a random path will be generated</small>
         </label>
         <label for="url">
           URL
-          <input
-            type="url"
-            id="url"
-            name="url"
-            placeholder="https://example.com"
-            required
-          />
-          <small id="urlFeedback" style="display: none; color: #ff4444"
-            >Please enter a valid URL</small
-          >
+          <input type="url" id="url" name="url" placeholder="https://example.com" required />
+          <small id="urlFeedback" style="display: none; color: #ff4444">Please enter a valid URL</small>
         </label>
         <label for="secret">
           Secret Code
           <em data-tooltip="a secret password to delete your shorturl">?</em>
-          <input
-            type="password"
-            id="secretCode"
-            name="secretCode"
-            placeholder="••••••••"
-            required
-          />
+          <input type="password" id="secretCode" name="secretCode" placeholder="••••••••" required />
         </label>
         <button type="submit" class="contrast"><b> Create Short URL</b></button>
       </form>
@@ -114,12 +94,8 @@ const html = `
       }
       loadRedirects();
       const modal = document.getElementById("myModal");
-      modal.addEventListener("close", () =>
-        modal.setAttribute("aria-hidden", "true")
-      );
-      modal.addEventListener("showModal", () =>
-        modal.setAttribute("aria-hidden", "false")
-      );
+      modal.addEventListener("close", () => modal.setAttribute("aria-hidden", "true"));
+      modal.addEventListener("showModal", () => modal.setAttribute("aria-hidden", "false"));
 
       const closeButton = modal.querySelector("button[aria-label='Close']");
       const messageEl = document.getElementById("message");
@@ -261,7 +237,6 @@ export default {
     <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
     <style>
-
       body {
         background-color: #111827;
         color: #fff;
@@ -284,7 +259,9 @@ export default {
   <body>
     <nav>
       <ul>
-        <li><strong><a href="/">MINRL</a></strong></li>
+        <li>
+          <strong><a href="/" style="text-decoration: none">MINRL</a></strong>
+        </li>
       </ul>
       <ul>
         <li><a href="/" class="secondary">Home</a></li>
@@ -404,9 +381,6 @@ async function serveDeletePage(env) {
     <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
     <style>
-
-    
-
       body {
         background-color: #111827;
         color: #fff;
@@ -429,7 +403,9 @@ async function serveDeletePage(env) {
   <body>
     <nav>
       <ul>
-        <li><strong><a href="/">MINRL</a></strong></li>
+        <li>
+          <strong><a href="/" style="text-decoration: none">MINRL</a></strong>
+        </li>
       </ul>
       <ul>
         <li><a href="/" class="secondary">Home</a></li>
@@ -580,14 +556,8 @@ async function serveListPage(env) {
     <meta name="color-scheme" content="dark" />
     <title>Shortened URLs</title>
     <link rel="manifest" href="manifest.json" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
     <style>
-
-    
-
       body {
         background-color: #111827;
         color: #fff;
@@ -637,7 +607,9 @@ async function serveListPage(env) {
   <body>
     <nav>
       <ul>
-        <li><strong><a href="/">MINRL</a></strong></li>
+        <li>
+          <strong><a href="/" style="text-decoration: none">MINRL</a></strong>
+        </li>
       </ul>
       <ul>
         <li><a href="/" class="secondary">Home</a></li>
@@ -667,24 +639,22 @@ async function serveListPage(env) {
         </tbody>
       </table>
     </main>
-  <script>
-  const keyCells = document.querySelectorAll(".copy-key");
-
-  keyCells.forEach(cell => {
-    cell.addEventListener("click", () => {
-      const key = cell.getAttribute("data-key");
-      const url = location.origin + "/" + key; 
-      navigator.clipboard.writeText(url)
-        .then(() => {
-          alert(\`Copied: \${url}\`);
-        })
-        .catch((err) => {
-          console.error("Failed to copy text: ", err);
+    <script>
+      const keyCells = document.querySelectorAll(".copy-key");
+      keyCells.forEach(cell => {
+        cell.addEventListener("click", () => {
+          const key = cell.getAttribute("data-key");
+          const url = location.origin + "/" + key; 
+          navigator.clipboard.writeText(url)
+            .then(() => {
+              alert(\`Copied: \${url}\`);
+            })
+            .catch((err) => {
+              console.error("Failed to copy text: ", err);
+            });
         });
-    });
-  });
-</script>
-
+      });
+    </script>
   </body>
 </html>
 `;
