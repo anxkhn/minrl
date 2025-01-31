@@ -41,7 +41,7 @@ const html = `
     </style>
   </head>
 
-  <body>
+  <body data-theme="dark">
     <nav>
       <ul>
         <li style="display: flex; align-items: center;">
@@ -268,7 +268,7 @@ export default {
     </style>
   </head>
 
-  <body>
+  <body data-theme="dark">
     <nav>
       <ul>
         <li style="display: flex; align-items: center;">
@@ -434,7 +434,7 @@ async function serveDeletePage(env) {
     </style>
   </head>
 
-  <body>
+  <body data-theme="dark">
     <nav>
       <ul>
         <li style="display: flex; align-items: center;">
@@ -660,7 +660,7 @@ async function serveListPage(env) {
     </style>
   </head>
 
-  <body>
+  <body data-theme="dark">
     <nav>
       <ul>
         <li style="display: flex; align-items: center;">
